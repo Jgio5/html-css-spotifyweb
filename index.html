@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title>Spotify</title>
@@ -210,18 +211,37 @@
         <!-- Fine Nav-Main-->
       </main>
       <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-1">
-
+        <div class="container_flex">
+          <div class="footer_box_left">
+            <div class="info_brano_ascoltato">
+              <img src="img/sinister.jpeg" alt="">
+              <div class="brano_ascoltato">
+                <h1>Sinister</h1>
+                <p>Brano nome</p>
+              </div>
             </div>
-            <div class="col-md-10">
-
-            </div>
-            <div class="col-md-1">
-
+            <div class="brano_preferito">
+              <a href="#"><i class="far fa-heart"></i></a>
+              <a href="#"><i class="far fa-folder"></i></a>
             </div>
           </div>
+          <div class="footer_box_center">
+            <div class="time_box_up">
+              <a href="#"><i class="fas fa-random"></i></a>
+              <a href="#"><i class="fas fa-step-backward"></i></a>
+              <a href="#"><i class="far fa-play-circle"></i></a>
+              <a href="#"><i class="fas fa-step-forward"></i></a>
+              <a href="#"><i class="fas fa-undo-alt"></i></a>
+            </div>
+            <div class="time_box_down">
+              <p class="start_song">0:25</p>
+              <p>4:35</p>
+            </div>
+          </div>
+          <div class="footer_box_right">
+            <a href="#"><i class="fas fa-bars"></i></a>
+            <a href="#"><i class="fas fa-desktop"></i></a>
+            <a class="volume_song" href="#"><i class="fas fa-volume-up"></i></a>
         </div>
       </footer>
     </div>
