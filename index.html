@@ -2,123 +2,76 @@
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title>Spotify</title>
   </head>
-  <body class="debug">
-    <div class="wapper clearflix">
+  <body>
+    <div class="wapper">
       <main>
-        <!-- Inizio Nav-Header-->
-        <section class="nav_header_top">
-          <div class="container container_top">
-            <div class="row row_logo">
-              <div class="visible-xs-block">
-                <img src="img/logo-small.svg" alt="Logo Spotify Small">
-              </div>
-              <div class="hidden-xs col-sm-9 col-md-9 col-lg-9">
-                <img src="img/logo.svg" alt="Logo Spotify">
-              </div>
+        <!-- Inizio Nav-vertical-left-->
+        <section class="nav_vertical_left">
+          <section class="nav_top">
+            <section class="nav_logo_mobile">
+              <img src="img/logo-small.svg" alt="Logo SmallSpotify">
+            </section>
+            <section class="logo">
+              <img src="img/logo.svg" alt="Logo Spotify">
+            </section>
+            <section class="nav_center">
+              <ul class="menu_list">
+                <li class="border_green">
+                  <a href="#">
+                    <img src="img/home.svg" alt="Logo Home">
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/search.svg" alt="Logo Search">
+                    <span>Cerca</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/libreria.svg" alt="Logo Libreria">
+                    <span>La tua libreria</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section class="playlist">
+              <h2>PLAYLIST</h2>
+              <p class="create_playlist"><a href="#"><span class="playlist_plus">+</span> Crea Playlist</a></p>
+              <ul class="menu_list">
+                <li><a href="#">Nuova Playlist</a></li>
+                <li><a href="#">Nuova Playlist</a></li>
+                <li><a href="#">Nuova Playlist</a></li>
+                <li><a href="#">Nuova Playlist</a></li>
+                <li><a href="#">Nuova Playlist</a></li>
+                <li><a href="#">Nuova Playlist</a></li>
+              </ul>
+            </section>
+          </section>
+          <section class="nav_bottom">
+            <div class="app_download">
+              <a class="download" href="#">
+                <img class="img_download"src="img/download.svg" alt="Logo Download">
+                <span>Installa app</span>
+              </a>
             </div>
-            <div class="row row_menu_laterale">
-              <div class="visible-xs-block">
-                <nav>
-                  <ul>
-                    <li><a href="#"><img src="img/home.svg" alt="Logo Home"></a></li>
-                    <li><a href="#"><img src="img/search.svg" alt="Logo Search"></a></li>
-                    <li><a href="#"><img src="img/libreria.svg" alt="Logo Libreria"></a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="hidden-xs col-sm-10 col-md-10 col-lg-10">
-                <nav>
-                  <ul>
-                    <li class="border_green">
-                      <a href="#">
-                        <img src="img/home.svg" alt="Logo Home">
-                        <h3>Home</h3>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="img/search.svg" alt="Logo Search">
-                        <h3>Cerca</h3>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="img/libreria.svg" alt="Logo Libreria">
-                        <h3>La tua libreria</h3>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+            <div class="user">
+              <a class="account"href="#">
+                <img class="img_account" src="img/profile.svg" alt="Logo Profile">
+                <span>Jhon Doe</span>
+              </a>
             </div>
-            <div class="row row_playlist">
-              <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
-                <h2>PLAYLIST</h2>
-              </div>
-              <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
-                <p><a href="#"><span class="playlist_plus">+</span> Crea Playlist</a></p>
-              </div>
-              <div class="playlist hidden-xs col-sm-12 col-md-12 col-lg-12">
-                <nav>
-                  <ul>
-                    <li><a href="#">Nuova Playlist</a></li>
-                    <li><a href="#">Nuova Playlist</a></li>
-                    <li><a href="#">Nuova Playlist</a></li>
-                    <li><a href="#">Nuova Playlist</a></li>
-                    <li><a href="#">Nuova Playlist</a></li>
-                    <li><a href="#">Nuova Playlist</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div class="container container_bottom">
-            <div class="row row_account_download">
-              <div class="visible-xs-block">
-                <nav>
-                  <ul>
-                    <li>
-                      <a class="download" href="#"><img class="img_download"src="img/download.svg" alt="Logo Download">
-                      </a>
-                    </li>
-                    <li>
-                      <a class="account"href="#">
-                        <img class="img_account" src="img/profile.svg" alt="Logo Profile">
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="hidden-xs col-sm-10 col-md-10 col-lg-10">
-                <nav>
-                  <ul>
-                    <li>
-                      <a class="download" href="#">
-                        <img class="img_download"src="img/download.svg" alt="Logo Download">
-                        <h3>Installa app</h3>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="account"href="#">
-                        <img class="img_account" src="img/profile.svg" alt="Logo Profile">
-                        <h3>Jhon Doe</h3>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
+          </section>
         </section>
-        <!-- Fine Nav-Header-->
-        <!-- Inizio Nav-Main-->
-        <section class="nav_main">
+        <!-- Fine Nav-vertical-left-->
+        <!-- Inizio Nav-Main-right-->
+        <section class="nav_main_right">
           <div class="container">
             <div class="upgrade">
               <a href="#">EFFETTUA L'UPGRADE</a>
@@ -238,7 +191,7 @@
             </div>
           </div>
         </section>
-        <!-- Fine Nav-Main-->
+        <!-- Fine Nav-Main-right-->
       </main>
       <footer>
         <div class="container_flex">
