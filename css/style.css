@@ -6,7 +6,9 @@
 
 body {
   min-width: 500px;
-  background-color: red;
+  height: 100vh;
+  overflow-y: hidden;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .wapper {
@@ -154,7 +156,7 @@ main {
   float: right;
   width: calc(100% - 230px);
   height: 100%;
-  overflow-y: auto;
+  overflow-y:scroll;
   background-color: #141922;
   text-align: center;
 }
@@ -215,7 +217,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 .box {
@@ -242,6 +244,9 @@ main {
   height: 200px;
   background-color: grey;
   opacity: 0;
+}
+.ms_layover.circle {
+  border-radius: 50%;
 }
 .ms_layover i {
   position: absolute;
@@ -357,6 +362,7 @@ footer {
   text-align: center;
 }
 .time_box_down .line_song {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -367,38 +373,165 @@ footer {
   content: "";
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   margin-top: 10px;
-  background-color: grey;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.349);
+  cursor: pointer;
 }
+
+.time_box_down .line_song .line_time_song {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 30%;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: grey;
+  cursor: pointer;
+}
+.time_box_down .line_song .line_time_song .point_line_time_song{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+}
+
 /* Fine footer_box_center */
 
 /* Inizio footer_box_right */
 .footer_box_right {
   width: 230px;
   height: 100px;
-  padding: 10px;
 }
 
 .footer_box_right ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
+}
+.footer_box_right ul li {
+  padding: 5px;
 }
 .footer_box_right a {
   color: white;
 }
 
-.footer_box_right .volume_song::after{
+.footer_box_right .menu_list li {
+  /* border: 1px solid white; */
+}
+
+.footer_box_right .line_song {
+  position: relative;
+  top: 45%;
+  transform: translateY(-45%);
+  border: 1px solid #282828;
+}
+.footer_box_right .line_song::before{
   content: "";
   display: block;
-  float: right;
   width: 70px;
-  height: 2px;
-  margin-top: 15px;
-  margin-left: 5px;
-  background-color: grey;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.349);
+  cursor: pointer;
 }
+.footer_box_right .line_song .line_time_song {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 30%;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: grey;
+  cursor: pointer;
+}
+.footer_box_right .line_song .line_time_song .point_line_time_song {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
 /* Inizio footer_box_right */
 /* Fine FOOTER */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #90EE90; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #89ff89;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #23ff23; 
+}
+
+/* Hover */
+.playlist a:hover,
+.col-md-12 a:hover,
+footer i:hover {
+  color: #90EE90;
+}
+
+.upgrade a:hover {
+  color: black;
+  font-size: bolder;
+  background-color: rgba(255, 255, 255, 0.618);
+} 
+
+.time_box_down .line_song .line_time_song:hover,
+.footer_box_right .line_song .line_time_song:hover {
+  background-color:greenyellow;
+}
+
+.time_box_down .line_song .line_time_song:hover .point_line_time_song,
+.footer_box_right .line_song .line_time_song:hover .point_line_time_song {
+  display: block;
+}
+
+/* MediaQuery */
+@media only screen and (max-width: 1124px) {
+  .box_song_first {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .time_box_up i {
+    font-size: 15px;
+  }
+  .time_box_down .start_song, .time_box_down .finish_song {
+    font-size: 11px;
+  }
+
+}
